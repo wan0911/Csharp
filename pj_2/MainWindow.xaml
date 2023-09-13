@@ -1,0 +1,248 @@
+﻿<Window x:Class="pj_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pj_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="635" Width="1006">
+    <Grid Margin="0,-2,0,11">
+        <!-- 조회 탭 -->
+        <TextBox HorizontalAlignment="Left" Margin="407,34,0,0" TextWrapping="Wrap" Text="학생정보 조회 및 출력" VerticalAlignment="Top" Width="160" FontFamily="LG Smart_H2.0 SB" FontSize="16" BorderBrush="{x:Null}" Foreground="#FF323235" Height="19"/>
+        <Button Content="초기화" Click="Initialize_Click" FontSize="9" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="17" Margin="897,36,0,0" VerticalAlignment="Top" Width="37" BorderBrush="{x:Null}" Background="#FF77839C" Foreground="White"/>
+        <Button x:Name="SearchBtn" Content="조회" FontSize="9" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="17" Margin="939,36,0,0" VerticalAlignment="Top" Width="37" BorderBrush="{x:Null}" Background="#FF77839C" Click="SearchBtn_Click" Foreground="White" RenderTransformOrigin="1.133,0.541"/>
+        <Rectangle HorizontalAlignment="Left" Height="84" Margin="407,58,0,0" VerticalAlignment="Top" Width="569" Fill="#FFE4E4E4"/>
+        <Ellipse HorizontalAlignment="Left" Height="3" Margin="423,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="3" RenderTransformOrigin="14.25,2.707" Fill="Black"/>
+        <TextBox x:Name="searchId" HorizontalAlignment="Left" Height="18" Margin="465,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" BorderBrush="{x:Null}" FontFamily="Leelawadee UI Semilight" FontSize="9" Foreground="#FF5B5B5B"/>
+
+        <TextBlock HorizontalAlignment="Left" Height="10" Margin="431,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="22" FontFamily="LG Smart_H2.0 R" FontSize="10" Text="학번" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBox HorizontalAlignment="Left" Margin="407,202,0,0" TextWrapping="Wrap" Text="학생정보 조회 목록" VerticalAlignment="Top" Width="158" FontFamily="LG Smart_H2.0 SB" FontSize="16" BorderBrush="{x:Null}" Foreground="#FF323235"  Height="23"/>
+        <!-- 데이터 바인딩 -->
+        <DataGrid  x:Name="StudentData" LoadingRow="dataGridLoadingRow" CanUserSortColumns="True" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="319" Margin="407,225,0,0" VerticalAlignment="Top" Width="574" FontSize="13" FontFamily="LG Smart_H Light">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="학번" Binding="{Binding Id}" SortMemberPath="Id"/>
+                <DataGridTextColumn Header="이름" Binding="{Binding Name}" SortMemberPath="Name"/>
+                <DataGridTextColumn Header="학년" Binding="{Binding Grade}" SortMemberPath="Grade"/>
+                <DataGridTextColumn Header="성별" Binding="{Binding Sex}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Ellipse HorizontalAlignment="Left" Height="3" Margin="618,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="3" RenderTransformOrigin="14.25,2.707" Fill="Black"/>
+        <TextBlock HorizontalAlignment="Left" Height="12" Margin="626,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="26" FontFamily="LG Smart_H2.0 R" FontSize="10" Text="이름" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBox x:Name="searchName" HorizontalAlignment="Left" Height="18" Margin="660,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" BorderBrush="{x:Null}" FontFamily="Leelawadee UI Semilight" FontSize="9" Foreground="#FF5B5B5B"/>
+        <Ellipse HorizontalAlignment="Left" Height="3" Margin="823,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="3" RenderTransformOrigin="14.25,2.707" Fill="Black"/>
+        <TextBlock HorizontalAlignment="Left" Height="12" Margin="831,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="22" FontFamily="LG Smart_H2.0 R" FontSize="10" Text="학년" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <ComboBox x:Name="searchGradeComboBox" HorizontalAlignment="Left" Height="20" Margin="871,71,0,0" VerticalAlignment="Top" Width="73" FontSize="10">
+            <ComboBoxItem Content="1학년"/>
+            <ComboBoxItem Content="2학년"/>
+            <ComboBoxItem Content="3학년"/>
+            <ComboBoxItem Content="4학년"/>
+        </ComboBox>
+        <Ellipse HorizontalAlignment="Left" Height="3" Margin="422,117,0,0" Stroke="Black" VerticalAlignment="Top" Width="2" RenderTransformOrigin="14.25,2.707" Fill="Black"/>
+        <TextBlock HorizontalAlignment="Left" Height="12" Margin="431,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" FontFamily="LG Smart_H2.0 R" FontSize="10" Text="소속대학" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <ComboBox HorizontalAlignment="Left" Height="20" Margin="487,110,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.801,0.429"/>
+        <Ellipse HorizontalAlignment="Left" Height="4" Margin="634,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="3" RenderTransformOrigin="14.25,2.707" Fill="Black"/>
+        <TextBlock HorizontalAlignment="Left" Height="12" Margin="642,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="19" FontFamily="LG Smart_H2.0 R" FontSize="10" Text="전공" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <ComboBox HorizontalAlignment="Left" Height="20" Margin="680,108,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.801,0.429"/>
+        <TextBox HorizontalAlignment="Left" Margin="31,31,0,0" TextWrapping="Wrap" Text="Stuent Management System" VerticalAlignment="Top" Width="261" FontFamily="LG Smart_H2.0 SB" FontSize="18" BorderBrush="{x:Null}" Foreground="#FF323235" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.021"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Rectangle HorizontalAlignment="Left" Height="360" Margin="37,75,0,0" VerticalAlignment="Top" Width="338" Fill="#FFF1F1F1"/>
+        <TextBox HorizontalAlignment="Left" Margin="60,88,0,0" TextWrapping="Wrap" Text="Student Register Form " VerticalAlignment="Top" Width="131" FontFamily="LG Smart_H Light" BorderBrush="{x:Null}" Foreground="#FF323235" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Height="19">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.006"/>
+                    <RotateTransform Angle="0.019"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="studentId" HorizontalAlignment="Left" Height="22" Margin="208,129,0,0" TextWrapping="Wrap" VerticalContentAlignment="Center" Text="" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" FontFamily="Leelawadee UI Semilight" FontSize="9" Foreground="#FF5B5B5B"/>
+        <!-- 학생정보 입력 form -->
+        <TextBlock HorizontalAlignment="Left" Height="11" Margin="67,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="34" FontFamily="LG Smart_H2.0 R" FontSize="10" Text="학번" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Rectangle HorizontalAlignment="Left" Margin="62,104,0,0" VerticalAlignment="Top" Width="291" Height="1" Fill="Black"/>
+        <TextBox x:Name="studentName" HorizontalAlignment="Left" Height="21" Margin="208,162,0,0" TextWrapping="Wrap" VerticalContentAlignment="Center" Text="" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" FontFamily="Leelawadee UI Semilight" FontSize="9" Foreground="#FF5B5B5B"/>
+        <TextBlock HorizontalAlignment="Left" Height="12" Margin="67,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" FontFamily="LG Smart_H2.0 R" FontSize="10" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="이름"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="20" Margin="208,225,0,0" TextWrapping="Wrap" VerticalContentAlignment="Center" Text="" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" FontFamily="Leelawadee UI Semilight" FontSize="9" Foreground="#FF5B5B5B"/>
+        <TextBlock HorizontalAlignment="Left" Height="10" Margin="67,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" FontFamily="LG Smart_H2.0 R" FontSize="10" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Text="소속대"/><Run Language="ko-kr" Text="학"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="208,255,0,0" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" FontFamily="Leelawadee UI Semilight" FontSize="9" Foreground="#FF5B5B5B"/>
+        <TextBlock HorizontalAlignment="Left" Height="12" Margin="67,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" FontFamily="LG Smart_H2.0 R" FontSize="10" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="전공"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="14" Margin="66,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontFamily="LG Smart_H2.0 R" FontSize="10" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="성별"/></TextBlock>
+        <ComboBox x:Name="sexComboBox" HorizontalAlignment="Left" Height="20" Margin="208,289,0,0" VerticalAlignment="Top" Width="89" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ComboBoxItem Content="남성"/>
+            <ComboBoxItem Content="여성"/>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="208,322,0,0" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" FontFamily="Leelawadee UI Semilight" FontSize="9" Foreground="#FF5B5B5B"/>
+        <TextBlock HorizontalAlignment="Left" Height="12" Margin="67,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" FontFamily="LG Smart_H2.0 R" FontSize="10" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="전화번호"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="12" Margin="67,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" FontFamily="LG Smart_H2.0 R" FontSize="10" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="주민등록번호"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="208,352,0,0" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" FontFamily="Leelawadee UI Semilight" FontSize="9" Foreground="#FF5B5B5B"/>
+        <TextBlock HorizontalAlignment="Left" Height="12" Margin="67,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" FontFamily="LG Smart_H2.0 R" FontSize="10" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="email"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="208,382,0,0" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" FontFamily="Leelawadee UI Semilight" FontSize="9" Foreground="#FF5B5B5B"/>
+        <Button x:Name="SaveBtn" Content="저장" FontSize="9" HorizontalAlignment="Left" Height="18" Margin="342,440,0,0" VerticalAlignment="Top" Width="33" BorderBrush="{x:Null}" Background="#FF77839C" Click="SaveBtn_Click" Foreground="White"/>
+        <Button Content="수정" Click="UpdateBtn_Click" FontSize="9" HorizontalAlignment="Left" Height="17" Margin="908,549,0,0" VerticalAlignment="Top" Width="30" BorderBrush="{x:Null}" Background="#FF77839C" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="6" Margin="91,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="8" FontFamily="LG Smart_H2.0 R" FontSize="8" RenderTransformOrigin="-0.109,0.666" Foreground="#FFFF407D">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="*"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="6" Margin="91,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="8" FontFamily="LG Smart_H2.0 R" FontSize="8" RenderTransformOrigin="-0.109,0.666" Foreground="#FFFF407D">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="*"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="15" Margin="67,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" FontFamily="LG Smart_H2.0 R" FontSize="10" RenderTransformOrigin="-0.109,0.666">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="학년"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="7" Margin="91,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="8" FontFamily="LG Smart_H2.0 R" FontSize="8" RenderTransformOrigin="-0.109,0.666" Foreground="#FFFF407D">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform><Run Language="ko-kr" Text="*"/></TextBlock>
+        <ComboBox x:Name="gradeComboBox" HorizontalAlignment="Left" Height="20" Margin="208,192,0,0" VerticalAlignment="Top" Width="89" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ComboBoxItem Content="1학년"/>
+            <ComboBoxItem Content="2학년"/>
+            <ComboBoxItem Content="3학년"/>
+            <ComboBoxItem Content="4학년"/>
+        </ComboBox>
+        <Button Content="삭제" Click="DeleteBtn_Clik" FontSize="9" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="17" Margin="944,549,0,0" VerticalAlignment="Top" Width="37" BorderBrush="{x:Null}" Background="#FF77839C" Foreground="White"/>
+
+
+
+
+    </Grid>
+</Window>

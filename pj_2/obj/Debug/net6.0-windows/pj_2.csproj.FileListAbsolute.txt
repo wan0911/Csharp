@@ -1,0 +1,40 @@
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2_MarkupCompile.cache
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2_MarkupCompile.lref
+C:\Users\94101981\Desktop\c#\pj_2\bin\Debug\net6.0-windows\pj_2.exe
+C:\Users\94101981\Desktop\c#\pj_2\bin\Debug\net6.0-windows\pj_2.deps.json
+C:\Users\94101981\Desktop\c#\pj_2\bin\Debug\net6.0-windows\pj_2.runtimeconfig.json
+C:\Users\94101981\Desktop\c#\pj_2\bin\Debug\net6.0-windows\pj_2.dll
+C:\Users\94101981\Desktop\c#\pj_2\bin\Debug\net6.0-windows\pj_2.pdb
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2.g.resources
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2.AssemblyInfoInputs.cache
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2.AssemblyInfo.cs
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2.csproj.CoreCompileInputs.cache
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2.dll
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\refint\pj_2.dll
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2.pdb
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\pj_2.genruntimeconfig.cache
+C:\Users\94101981\Desktop\c#\pj_2\obj\Debug\net6.0-windows\ref\pj_2.dll
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\bin\Debug\net6.0-windows\pj_2.exe
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\bin\Debug\net6.0-windows\pj_2.deps.json
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\bin\Debug\net6.0-windows\pj_2.runtimeconfig.json
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\bin\Debug\net6.0-windows\pj_2.dll
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\bin\Debug\net6.0-windows\pj_2.pdb
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2_MarkupCompile.cache
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2_MarkupCompile.lref
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2.g.resources
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2.AssemblyInfoInputs.cache
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2.AssemblyInfo.cs
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2.csproj.CoreCompileInputs.cache
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2.dll
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\refint\pj_2.dll
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2.pdb
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\pj_2.genruntimeconfig.cache
+C:\Users\94101981\Desktop\인턴 자료\1차 과제\pj_2\obj\Debug\net6.0-windows\ref\pj_2.dll
